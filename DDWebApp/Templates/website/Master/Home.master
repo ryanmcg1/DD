@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Master_Home" %>
+<%@ Register Src="~/Templates/Website/UserControls/Header.ascx" TagPrefix="UC1" TagName="Header"  %>
+<%@ Register Src="~/Templates/Website/UserControls/Footer.ascx" TagPrefix="UC1" TagName="Footer"  %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="/Templates/css/coastways_icons.css" />
+    <link rel="stylesheet" href="/Templates/css/foundation.css" />
+    <script src="~/Templates/Website/js/vendor/modernizr.js"></script>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <UC1:Header ID="ucHeader" runat="server" EnableViewState="false" />
+        <asp:ContentPlaceHolder id="main" runat="server">
+
+        </asp:ContentPlaceHolder>
+        <UC1:Footer ID="ucFooter" runat="server" EnableViewState="false" />
+    </form>
+</body>
+</html>

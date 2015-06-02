@@ -1,0 +1,71 @@
+﻿@font-face {
+  font-family: 'coastways_icon';
+  src: url('../font/coastways_icon.eot?64742463');
+  src: url('../font/coastways_icon.eot?64742463#iefix') format('embedded-opentype'),
+       url('../font/coastways_icon.woff?64742463') format('woff'),
+       url('../font/coastways_icon.ttf?64742463') format('truetype'),
+       url('../font/coastways_icon.svg?64742463#coastways_icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'coastways_icon';
+    src: url('../font/coastways_icon.svg?64742463#coastways_icon') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "coastways_icon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-phone:before { content: '\e800'; } /* 'î €' */
+.icon-mail-alt:before { content: '\e801'; } /* 'î ' */
+.icon-location:before { content: '\e802'; } /* 'î ‚' */
+.icon-youtube:before { content: '\e803'; } /* 'î ƒ' */
+.icon-home:before { content: '\e804'; } /* 'î „' */
+.icon-down-open-mini:before { content: '\e805'; } /* 'î …' */
+.icon-left-open-mini:before { content: '\e806'; } /* 'î †' */
+.icon-right-open-mini:before { content: '\e807'; } /* 'î ‡' */
+.icon-up-open-mini:before { content: '\e808'; } /* 'î ˆ' */
+.icon-clock:before { content: '\e809'; } /* 'î ‰' */
+.icon-clock-1:before { content: '\e80a'; } /* 'î Š' */
+.icon-attention:before { content: '\e80b'; } /* 'î ‹' */
+.icon-ok:before { content: '\e80c'; } /* 'î Œ' */
+.icon-ok-circle:before { content: '\e80d'; } /* 'î ' */
+.icon-box33:before { content: '\e80e'; } /* 'î Ž' */
+.icon-clock14:before { content: '\e80f'; } /* 'î ' */
+.icon-trolley3:before { content: '\e810'; } /* 'î ' */
+.icon-upload25:before { content: '\e811'; } /* 'î ‘' */
+.icon-packaging1:before { content: '\e812'; } /* 'î ’' */
