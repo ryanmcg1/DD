@@ -203,6 +203,7 @@
     <Content Include="bin\WebGrease.dll" />
     <Content Include="packages.config" />
     <Content Include="bin\DDWebApp.dll.config" />
+    <Content Include="dd.bak" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
