@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Artists.aspx.cs" Inherits="DDWebApp.Templates.website.Admin.Artists.Default" MasterPageFile="~/Templates/Website/Master/content.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DDWebApp.Templates.website.Admin.Artists.Default" MasterPageFile="~/Templates/Website/Master/content.master" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="main">
 
