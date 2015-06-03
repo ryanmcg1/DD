@@ -16,7 +16,6 @@ namespace DDWebApp.Templates.website.Admin.UserRoles
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            UserManager.
             MyUserManager userManager = Context.GetOwinContext().Get<MyUserManager>();
             userManager.AddToRole(18, "User");
             List<MyUser> userList = UserInfoProvider.GetUsers(Context);
@@ -32,6 +31,10 @@ namespace DDWebApp.Templates.website.Admin.UserRoles
             }
             chkUserRoleRole.DataBind();
 
+
+
+            //gvUserRoles.DataSource;
+            //gvUserRoles.DataBind();
         }
 
         protected void btnAddUserRole_Click(object sender, EventArgs e)

@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" 
-    Inherits="DDWebApp.Templates.website.User.Register"
-     MasterPageFile="~/Templates/Website/Master/content.master"    %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs"     Inherits="DDWebApp.Templates.website.User.Register"     MasterPageFile="~/Templates/Website/Master/content.master"    %>
 
 <asp:Content runat="server" ContentPlaceHolderID="main">
 

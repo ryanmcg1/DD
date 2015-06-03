@@ -1,14 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DDWebApp.Templates.website.Admin.UserRoles.Default" MasterPageFile="~/Templates/Website/Master/content.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserRoles.aspx.cs" Inherits="DDWebApp.Templates.website.Admin.UserRoles.Default" MasterPageFile="~/Templates/Website/Master/content.master" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="main">
 
    
 
      <asp:UpdatePanel ID="updatepanel" runat="server">
-        <Triggers>
-            
-            <asp:PostBackTrigger ControlID="btnAddRole" />
-        </Triggers>
+        
         <ContentTemplate>
             
 
@@ -25,6 +22,8 @@
         <asp:Panel ID="pnlUserRoleList" runat="server" EnableViewState="false">
             <h2><asp:Literal ID="lblUserRoleHeader" runat="server" EnableViewState="false" Text="Roles List"/></h2>
             <asp:GridView ID="gvUserRoles" runat="server" EnableViewState="false" />
+
+            This will list users, then redirect to edit screen so roles can be added or removed.
         </asp:Panel>
         </ContentTemplate>
     </asp:UpdatePanel>
