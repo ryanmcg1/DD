@@ -284,7 +284,7 @@
     <Content Include="Scripts\vendor\jquery.js" />
     <Content Include="Scripts\vendor\modernizr.js" />
     <Content Include="Scripts\vendor\placeholder.js" />
-    <Content Include="Templates\website\Admin\Artists\Default.aspx" />
+    <Content Include="Templates\website\Admin\Artists\Artists.aspx" />
     <Content Include="Templates\website\Admin\Default.aspx" />
     <Content Include="Templates\website\Admin\Events\Default.aspx" />
     <Content Include="Templates\website\Admin\Roles\Default.aspx" />
@@ -350,12 +350,12 @@
     <Compile Include="Models\Venue\VenueInfoProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Templates\website\Admin\Artists\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Artists\Artists.aspx.cs">
+      <DependentUpon>Artists.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Templates\website\Admin\Artists\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Artists\Artists.aspx.designer.cs">
+      <DependentUpon>Artists.aspx</DependentUpon>
     </Compile>
     <Compile Include="Templates\website\Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
