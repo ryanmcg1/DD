@@ -22,5 +22,5 @@
 
     <asp:Literal ID="ltlErrorMessage" runat="server" EnableViewState="false" />
     <asp:Literal ID="ltlFailureText" runat="server" EnableViewState="false" />
-    <asp:Literal ID="Literal2" runat="server" EnableViewState="false" />
+    <asp:Literal ID="Literal2" runat="server" EnableViewState="false" />a
 </asp:Content>
