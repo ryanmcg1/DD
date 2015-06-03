@@ -300,7 +300,6 @@
     <Content Include="Templates\website\User\Login.aspx" />
     <Content Include="Templates\website\User\Register.aspx" />
     <Content Include="Templates\website\Default.aspx" />
-    <Content Include="Templates\website\Events\Default.aspx" />
     <Content Include="Templates\website\UserControls\ucBreadCrumb.ascx" />
     <Content Include="Templates\website\Venues\Venues.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -321,7 +320,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <None Include="App_Start\IdentityConfig.csz" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Global.asax.cs">
@@ -456,10 +454,6 @@
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Templates\website\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Templates\website\Events\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

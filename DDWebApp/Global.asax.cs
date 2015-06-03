@@ -35,18 +35,18 @@ namespace DDWebApp
 
             //Events
             routes.MapPageRoute("Events", "Events", "~/Templates/Website/Events/Events.aspx");
-            routes.MapPageRoute("Events", "Events/Add", "~/Templates/Website/Events/AddEvent.aspx");
-            routes.MapPageRoute("Events", "Events/Edit", "~/Templates/Website/Events/EditEvent.aspx");
+            routes.MapPageRoute("Events", "Events/Add", "~/Templates/Website/Events/EventAdd.aspx");
+            routes.MapPageRoute("Events", "Events/Edit", "~/Templates/Website/Events/EventEdit.aspx");
 
             //Venues
             routes.MapPageRoute("Venues", "Venues", "~/Templates/Website/Venues/Venues.aspx");
-            routes.MapPageRoute("Venues", "Venues/Add", "~/Templates/Website/Venues/AddVenues.aspx");
-            routes.MapPageRoute("Venues", "Venues/Edit", "~/Templates/Website/Venues/EditVenues.aspx");
+            routes.MapPageRoute("Venues", "Venues/Add", "~/Templates/Website/Venues/VenuesAdd.aspx");
+            routes.MapPageRoute("Venues", "Venues/Edit", "~/Templates/Website/Venues/VenuesEdit.aspx");
 
             //Artist
             routes.MapPageRoute("Artists", "Artists", "~/Templates/Website/Artists/Artists.aspx");
-            routes.MapPageRoute("Artists", "Artists/Add", "~/Templates/Website/Artists/AddArtists.aspx");
-            routes.MapPageRoute("Artists", "Artists/Edit", "~/Templates/Website/Artists/EditArtists.aspx");
+            routes.MapPageRoute("Artists", "Artists/Add", "~/Templates/Website/Artists/ArtistsAdd.aspx");
+            routes.MapPageRoute("Artists", "Artists/Edit", "~/Templates/Website/Artists/ArtistsEdit.aspx");
             //routes.MapPageRoute("Admin", "", "~/Templates/Website/F.aspx");
 
 
