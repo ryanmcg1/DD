@@ -284,16 +284,16 @@
     <Content Include="Scripts\vendor\jquery.js" />
     <Content Include="Scripts\vendor\modernizr.js" />
     <Content Include="Scripts\vendor\placeholder.js" />
-    <Content Include="Templates\website\Admin\Artists\Default.aspx" />
+    <Content Include="Templates\website\Admin\Artists\Artists.aspx" />
     <Content Include="Templates\website\Admin\Default.aspx" />
-    <Content Include="Templates\website\Admin\Events\Default.aspx" />
-    <Content Include="Templates\website\Admin\Roles\Default.aspx" />
-    <Content Include="Templates\website\Admin\UserRoles\Default.aspx" />
-    <Content Include="Templates\website\Admin\Users\Default.aspx" />
-    <Content Include="Templates\website\Admin\Venues\Default.aspx" />
+    <Content Include="Templates\website\Admin\Events\Events.aspx" />
+    <Content Include="Templates\website\Admin\Roles\Roles.aspx" />
+    <Content Include="Templates\website\Admin\UserRoles\UserRoles.aspx" />
+    <Content Include="Templates\website\Admin\Users\Users.aspx" />
+    <Content Include="Templates\website\Admin\Venues\Venues.aspx" />
     <Content Include="Templates\website\UserControls\Footer.ascx" />
     <Content Include="Templates\website\UserControls\Header.ascx" />
-    <Content Include="Templates\website\User\Default.aspx" />
+    <Content Include="Templates\website\User\User.aspx" />
     <Content Include="Templates\website\User\Login.aspx" />
     <Content Include="Templates\website\User\Register.aspx" />
     <Content Include="Templates\website\Default.aspx" />
@@ -350,12 +350,12 @@
     <Compile Include="Models\Venue\VenueInfoProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Templates\website\Admin\Artists\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Artists\Artists.aspx.cs">
+      <DependentUpon>Artists.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Templates\website\Admin\Artists\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Artists\Artists.aspx.designer.cs">
+      <DependentUpon>Artists.aspx</DependentUpon>
     </Compile>
     <Compile Include="Templates\website\Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -364,40 +364,40 @@
     <Compile Include="Templates\website\Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Templates\website\Admin\Events\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Events\Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Templates\website\Admin\Events\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Events\Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Templates\website\Admin\Roles\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Roles\Roles.aspx.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Templates\website\Admin\Roles\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Roles\Roles.aspx.designer.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Templates\website\Admin\UserRoles\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\UserRoles\UserRoles.aspx.cs">
+      <DependentUpon>UserRoles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Templates\website\Admin\UserRoles\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\UserRoles\UserRoles.aspx.designer.cs">
+      <DependentUpon>UserRoles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Templates\website\Admin\Users\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Users\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Templates\website\Admin\Users\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Users\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Templates\website\Admin\Venues\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Venues\Venues.aspx.cs">
+      <DependentUpon>Venues.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Templates\website\Admin\Venues\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\Admin\Venues\Venues.aspx.designer.cs">
+      <DependentUpon>Venues.aspx</DependentUpon>
     </Compile>
     <Compile Include="Templates\website\UserControls\Footer.ascx.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
@@ -413,12 +413,12 @@
     <Compile Include="Templates\website\UserControls\Header.ascx.designer.cs">
       <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Templates\website\User\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\User\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Templates\website\User\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Templates\website\User\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
     </Compile>
     <Compile Include="Templates\website\User\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
