@@ -22,31 +22,31 @@ namespace DDWebApp
         void RegisterRoutes(RouteCollection routes)
         {
             //Admin
-            routes.MapPageRoute("Admin", "Admin/Users", "~/Templates/Website/Admin/Users/Users.aspx");
-            routes.MapPageRoute("Admin", "Admin/Events", "~/Templates/Website/Admin/Events/Events.aspx");
-            routes.MapPageRoute("Admin", "Admin/Venues", "~/Templates/Website/Admin/Venues/Venues.aspx");
-            routes.MapPageRoute("Admin", "Admin/Roles", "~/Templates/Website/Admin/Roles/Roles.aspx");
-            routes.MapPageRoute("Admin", "Admin/UserRoles", "~/Templates/Website/Admin/UserRoles/UserRoles.aspx");
-            routes.MapPageRoute("Admin", "Admin/Artists", "~/Templates/Website/Admin/Artists/Artists.aspx");
+            routes.MapPageRoute("AdminUsers", "Admin/Users", "~/Templates/Website/Admin/Users/Users.aspx");
+            routes.MapPageRoute("AdminEvents", "Admin/Events", "~/Templates/Website/Admin/Events/Events.aspx");
+            routes.MapPageRoute("AdminVenues", "Admin/Venues", "~/Templates/Website/Admin/Venues/Venues.aspx");
+            routes.MapPageRoute("AdminRoles", "Admin/Roles", "~/Templates/Website/Admin/Roles/Roles.aspx");
+            routes.MapPageRoute("AdminUserRoles", "Admin/UserRoles", "~/Templates/Website/Admin/UserRoles/UserRoles.aspx");
+            routes.MapPageRoute("AdminArtists", "Admin/Artists", "~/Templates/Website/Admin/Artists/Artists.aspx");
             //Users
             routes.MapPageRoute("User", "User", "~/Templates/Website/User/User.aspx");
-            routes.MapPageRoute("User", "Login", "~/Templates/Website/User/Login.aspx");
-            routes.MapPageRoute("User", "Register", "~/Templates/Website/User/Register.aspx");
+            routes.MapPageRoute("UserLogin", "Login", "~/Templates/Website/User/Login.aspx");
+            routes.MapPageRoute("UserRegister", "Register", "~/Templates/Website/User/Register.aspx");
 
             //Events
             routes.MapPageRoute("Events", "Events", "~/Templates/Website/Events/Events.aspx");
-            routes.MapPageRoute("Events", "Events/Add", "~/Templates/Website/Events/EventAdd.aspx");
-            routes.MapPageRoute("Events", "Events/Edit", "~/Templates/Website/Events/EventEdit.aspx");
+            routes.MapPageRoute("EventsAdd", "Events/Add", "~/Templates/Website/Events/AddEvent.aspx");
+            routes.MapPageRoute("EventsEdit", "Events/Edit", "~/Templates/Website/Events/EditEvent.aspx");
 
             //Venues
             routes.MapPageRoute("Venues", "Venues", "~/Templates/Website/Venues/Venues.aspx");
-            routes.MapPageRoute("Venues", "Venues/Add", "~/Templates/Website/Venues/VenuesAdd.aspx");
-            routes.MapPageRoute("Venues", "Venues/Edit", "~/Templates/Website/Venues/VenuesEdit.aspx");
+            routes.MapPageRoute("VenuesAdd", "Venues/Add", "~/Templates/Website/Venues/AddVenues.aspx");
+            routes.MapPageRoute("VenuesEdit", "Venues/Edit", "~/Templates/Website/Venues/EditVenues.aspx");
 
             //Artist
             routes.MapPageRoute("Artists", "Artists", "~/Templates/Website/Artists/Artists.aspx");
-            routes.MapPageRoute("Artists", "Artists/Add", "~/Templates/Website/Artists/ArtistsAdd.aspx");
-            routes.MapPageRoute("Artists", "Artists/Edit", "~/Templates/Website/Artists/ArtistsEdit.aspx");
+            routes.MapPageRoute("ArtistsAdd", "Artists/Add", "~/Templates/Website/Artists/AddArtists.aspx");
+            routes.MapPageRoute("ArtistsEdit", "Artists/Edit", "~/Templates/Website/Artists/EditArtists.aspx");
             //routes.MapPageRoute("Admin", "", "~/Templates/Website/F.aspx");
 
 
