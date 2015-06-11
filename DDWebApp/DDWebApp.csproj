@@ -328,6 +328,8 @@
     <Compile Include="Models\Artist\ArtistInfo.cs" />
     <Compile Include="Models\Artist\ArtistInfoProvider.cs" />
     <Compile Include="Models\Database\Database.cs" />
+    <Compile Include="Models\Events\EventsInfo.cs" />
+    <Compile Include="Models\Events\EventsInfoProvider.cs" />
     <Compile Include="Models\Identity\ApplicationDbContext.cs" />
     <Compile Include="Models\Identity\EmailService.cs" />
     <Compile Include="Models\Identity\IdentityHelper.cs" />

@@ -76,6 +76,32 @@ namespace DDWebApp.Models.Database
                     }
             }
         }
+
+        public bool ExecuteStoredProc(SqlCommand query, string StoredProcName)
+        {
+            using (SqlConnection conn = Connect())
+            {
+                try
+                {
+                    OnDatabaseQueryEvent(query.CommandText);
+                    conn.Open();
+                    query.CommandText = StoredProcName;
+                    query.CommandType = CommandType.StoredProcedure;
+                    query.Connection = conn;
+                    query.ExecuteNonQuery();
+
+                    return true;
+
+                    //conn.Close(); //Not needed with using.
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+
         public static DataSet ReturnDataset(SqlCommand query)
         {
             return ReturnDataset(query.CommandText);

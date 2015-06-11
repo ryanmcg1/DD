@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DDWebApp.Models.Event;
 
 namespace DDWebApp.Templates.website.Events
 {
@@ -11,7 +12,7 @@ namespace DDWebApp.Templates.website.Events
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

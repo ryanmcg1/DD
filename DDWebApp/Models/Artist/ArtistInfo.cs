@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.SqlClient;
 using DDWebApp.Models.MessageEventArgInfo;
 using DDWebApp.Models.Database;
 using DDWebApp.Models.Logger;
-using System.Data.SqlClient;
+
 
 namespace DDWebApp.Models.Artist
 {
@@ -16,6 +17,8 @@ namespace DDWebApp.Models.Artist
         public string ArtistPhoneNumber { get; set; }
         public string ArtistWebsite { get; set; }
         public string ArtistEmail { get; set; }
+        
+        public DateTime ArtistDateCreated { get; set; }
 
 
         public bool SaveArtist()
@@ -23,7 +26,7 @@ namespace DDWebApp.Models.Artist
             //iF Edit ... todo
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "INSERT INTO Artist(ArtistName,ArtistWebsite,ArtistPhoneNumber,ArtistEmail)VALUES(@ArtistName,@ArtistWebsite,@ArtistPhoneNumber,@ArtistEmail)";
+                //cmd.CommandText = "INSERT INTO Artist(ArtistName,ArtistWebsite,ArtistPhoneNumber,ArtistEmail)VALUES(@ArtistName,@ArtistWebsite,@ArtistPhoneNumber,@ArtistEmail)";
                 cmd.Parameters.AddWithValue("@ArtistName", this.ArtistName);
                 cmd.Parameters.AddWithValue("@ArtistWebsite", this.ArtistWebsite);
                 cmd.Parameters.AddWithValue("@ArtistPhoneNumber", this.ArtistPhoneNumber);
@@ -36,7 +39,7 @@ namespace DDWebApp.Models.Artist
                 this.OnSaveArtist += logger.OnEvent;
                 
                 //Execute sqlcommand
-                bool result = DBP.ExecuteQuery(cmd);
+                bool result = DBP.ExecuteStoredProc(cmd,"sp_InsertArtist");
                 OnSaveArtistEvent("Artist saved:" + this.ArtistName + "-" + result);
                 return result;
             }

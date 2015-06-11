@@ -69,7 +69,7 @@ namespace DDWebApp.Models.Venue
             //iF Edit ... todo
             using (SqlCommand cmd = new SqlCommand())
             {
-                cmd.CommandText = "INSERT INTO Venue(VenueName,VenueEmail,VenueWebsite)VALUES(@VenueName,@VenueEmail,@VenueWebsite)";
+                //cmd.CommandText = "INSERT INTO Venue(VenueName,VenueEmail,VenueWebsite)VALUES(@VenueName,@VenueEmail,@VenueWebsite)";
                 cmd.Parameters.AddWithValue("@VenueName", _VenueName);
                 cmd.Parameters.AddWithValue("@VenueWebsite", _VenueWebsite);
                 cmd.Parameters.AddWithValue("@VenueEmail", _VenueEmail);
