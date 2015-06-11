@@ -36,13 +36,13 @@
             <section class="top-bar-section">
                 <!-- Right Nav Section -->
                 <ul class="right">
-                    <li><a href="/Templates/website/Admin/Default.aspx">Home</a></li>
-                    <li><a href="/Templates/website/Admin/Venues/">Venues</a></li>
-                    <li><a href="/Templates/website/Admin/Events/">Events</a></li>
-                    <li><a href="/Templates/website/Admin/Artists/">Artists</a></li>
-                    <li><a href="/Templates/website/Admin/roles/">roles</a></li>
-                    <li><a href="/Templates/website/Admin/users/">users</a></li>
-                    <li><a href="/Templates/website/Admin/">def</a></li>
+                    <li><a href="/Default.aspx">Home</a></li>
+                    <li><a href="/Admin/Venues">Venues</a></li>
+                    <li><a href="/Admin/Events">Events</a></li>
+                    <li><a href="/Admin/Artists">Artists</a></li>
+                    <li><a href="/Admin/roles">roles</a></li>
+                    <li><a href="/Admin/users">users</a></li>
+                    <li><a href="/Admin/">def</a></li>
        
                 </ul>
             </section>
