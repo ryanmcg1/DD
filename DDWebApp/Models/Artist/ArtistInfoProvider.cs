@@ -7,7 +7,7 @@ using System.Web;
 
 namespace DDWebApp.Models.Artist
 {
-    public class ArtistInfoProvider
+    public class ArtistInfoProvider : ArtistInfo
     {
 
         public static ArtistInfo GetArtistById(int ID)
@@ -16,13 +16,7 @@ namespace DDWebApp.Models.Artist
 
             if (ds != null)
             {
-                ArtistInfo artist = new ArtistInfo();
-                artist.ArtistName = ds.Tables[0].Rows[0]["ArtistName"].ToString();
-                artist.ArtistPhoneNumber = ds.Tables[0].Rows[0]["ArtistPhoneNumber"].ToString();
-                artist.ArtistWebsite = ds.Tables[0].Rows[0]["ArtistWebsite"].ToString();
-                artist.ArtistEmail = ds.Tables[0].Rows[0]["ArtistEmail"].ToString();
-                artist.ArtistDateCreated =(DateTime) ds.Tables[0].Rows[0]["ArtistDateCreated"];
-                return artist;
+                return new ArtistInfo(ds.Tables[0].Rows[0]);
             }
             else
             {
@@ -63,12 +57,7 @@ namespace DDWebApp.Models.Artist
 
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    ArtistInfo artist = new ArtistInfo();
-                    artist.ArtistName = dr["ArtistName"].ToString();
-                    artist.ArtistPhoneNumber = dr["ArtistPhoneNumber"].ToString();
-                    artist.ArtistWebsite = dr["ArtistWebsite"].ToString();
-                    artist.ArtistEmail = dr["ArtistEmail"].ToString();
-                    artistList.Add(artist);
+                    artistList.Add(new ArtistInfo(dr));
                 }
                 return artistList;
             }

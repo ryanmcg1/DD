@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using DDWebApp.Models.MessageEventArgInfo;
 using DDWebApp.Models.Database;
 using DDWebApp.Models.Logger;
+using System.Data;
 
 
 namespace DDWebApp.Models.Event
@@ -14,15 +15,31 @@ namespace DDWebApp.Models.Event
     {
         public event EventHandler<MessageEventArgs> OnSaveEvent;
 
-        
+        public int EventID {get; set;}
         public string EventName { get; set; }
         public DateTime EventDate { get; set; }
-        public DateTime EventDateCreated { get; set; }
-
         public bool EventIsPublished { get; set; }
 
         public string EventDescription { get; set; }
+        public string EventNotes1 { get; set; }
+        public string EventNotes2 { get; set; }
+        public DateTime CreationTimeStamp { get;  set; }
+        public DateTime UpdateTimeStamp { get;  set; }
        
+        public EventInfo()
+        {
+
+        }
+
+        public EventInfo(DataRow dr)
+        {
+            this.EventID = int.Parse(dr["EventID"].ToString());
+            this.EventName = dr["EventName"].ToString();
+            this.CreationTimeStamp = dr.Field<DateTime>("CreationTimeStamp");
+            this.EventDate = dr.Field<DateTime>("EventDate");
+            this.EventDescription = dr["EventDescription"].ToString();
+            this.EventIsPublished = (bool)dr["EventIsPublished"];
+        }
         public bool SaveEvent()
         {
             //iF Edit ... todo
@@ -35,9 +52,8 @@ namespace DDWebApp.Models.Event
                 cmd.Parameters.AddWithValue("@EventIsPublished", EventIsPublished);
 
                 DatabaseProvider DBP = new DatabaseProvider();
-                LogInfo logger = new LogInfo();
-
-                this.OnSaveEvent += logger.OnEvent;
+               
+                this.OnSaveEvent += LogInfo.OnEvent;
                 
                 //Execute SP
                 bool result = DBP.ExecuteStoredProc(cmd,"sp_InsertEvent");

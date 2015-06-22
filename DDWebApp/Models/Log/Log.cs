@@ -13,7 +13,7 @@ namespace DDWebApp.Models.Logger
 public class LogInfo
 {
     
-    public void OnEvent(object sender, MessageEventArgs e)
+    public static void OnEvent(object sender, MessageEventArgs e)
     {
         using (SqlCommand cmd = new SqlCommand())
         {

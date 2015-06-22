@@ -75,9 +75,8 @@ namespace DDWebApp.Models.Venue
                 cmd.Parameters.AddWithValue("@VenueEmail", _VenueEmail);
 
                 DatabaseProvider DBP = new DatabaseProvider();
-                LogInfo logger = new LogInfo();
-
-                this.OnSaveVenue += logger.OnEvent;
+               
+                this.OnSaveVenue += LogInfo.OnEvent;
                 //Execute sqlcommand
                 bool result = DBP.ExecuteQuery(cmd);
                 OnSaveVenueEvent("Venue saved:" + _VenueName);

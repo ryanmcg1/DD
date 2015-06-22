@@ -21,10 +21,7 @@ namespace DDWebApp.Models.EventInfoProvider
 
             if (ds != null)
             {
-                EventInfo Event = new EventInfo();
-                Event.EventName = ds.Tables[0].Rows[0]["EventName"].ToString();
-                Event.EventDate = DateTime.Parse(ds.Tables[0].Rows[0]["EventWebsite"].ToString());
-                return Event;
+                   return new EventInfo(ds.Tables[0].Rows[0]);
             }
             else
             {
@@ -74,14 +71,7 @@ namespace DDWebApp.Models.EventInfoProvider
 
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    EventInfo Event = new EventInfo();
-                    Event.EventName = dr["EventName"].ToString();
-                    Event.EventDateCreated = dr.Field<DateTime>("EventDateCreated");
-                    Event.EventDate = dr.Field<DateTime>("EventDate");
-                    Event.EventDescription = dr["EventDescription"].ToString();
-                    Event.EventIsPublished = (bool)dr["EventIsPublished"];
-
-                    EventList.Add(Event);
+                    EventList.Add(new EventInfo(dr));
                 }
                 return EventList;
             }
