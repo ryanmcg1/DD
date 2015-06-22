@@ -24,12 +24,12 @@ namespace DDWebApp.Models.Artist
             }
         }
 
-        public static List<ArtistInfo> GetArtist()
+        public static List<ArtistInfo> GetArtists()
         {
-            return GetArtist("", "", 0);
+            return GetArtists("", "", 0);
         }
 
-        public static List<ArtistInfo> GetArtist(string Where,String OrderBy, int TopN)
+        public static List<ArtistInfo> GetArtists(string Where,String OrderBy, int TopN)
         {
             string sql = "";
 

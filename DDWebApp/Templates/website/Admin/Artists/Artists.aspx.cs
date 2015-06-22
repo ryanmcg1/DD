@@ -12,7 +12,7 @@ namespace DDWebApp.Templates.website.Admin.Artists
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<ArtistInfo> enlist = ArtistInfoProvider.GetArtist();
+            List<ArtistInfo> enlist = ArtistInfoProvider.GetArtists();
 
             rptArtist.DataSource = enlist;
             rptArtist.DataBind();

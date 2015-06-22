@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using DDWebApp.Models.MessageEventArgInfo;
 using DDWebApp.Models.Database;
 using DDWebApp.Models.Logger;
+using System.Data;
 
 namespace DDWebApp.Models.Venue
 {
@@ -21,6 +22,13 @@ namespace DDWebApp.Models.Venue
         public VenueInfo()
         {
 
+        }
+
+        public VenueInfo(DataRow dr)
+        {
+            this.VenueName = dr["VenueName"].ToString();
+            this.VenueWebsite = dr["VenueWebsite"].ToString();
+            this.VenueEmail = dr["VenueEmail"].ToString();
         }
 
 
