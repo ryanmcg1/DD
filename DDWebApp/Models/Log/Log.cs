@@ -1,42 +1,16 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Linq;
 using System.Web;
-using DDWebApp.Models.MessageEventArgInfo;
-using DDWebApp.Models.Database;
 
-namespace DDWebApp.Models.Logger
+namespace DDWebApp.Models.Log
 {
-
-
-public class LogInfo
-{
-    
-    public static void OnEvent(object sender, MessageEventArgs e)
+    public abstract class Logs
     {
-        using (SqlCommand cmd = new SqlCommand())
-        {
-            cmd.CommandText = "INSERT INTO Log(LogDescription,LogDateCreated)VALUES(@LogDescription,@LogDateCreated)";
-            cmd.Parameters.AddWithValue("@LogDescription", e.Message);
-            cmd.Parameters.AddWithValue("@LogDateCreated", DateTime.Now);
+        public abstract void WriteToLog(string message);
 
-            DatabaseProvider DBP = new DatabaseProvider();
-            DBP.ExecuteQuery(cmd);
-        }
+        public abstract void DeleteFromLog(int id);
+        public abstract void ClearLog();
+
     }
-
-	public static void WriteLog(string message)
-	{
-        using (SqlCommand cmd = new SqlCommand())
-        {
-            cmd.CommandText = "INSERT INTO Log(LogDescription,LogDateCreated)VALUES(@LogDescription,@LogDateCreated)";
-            cmd.Parameters.AddWithValue("@LogDescription", message);
-            cmd.Parameters.AddWithValue("@LogDateCreated", DateTime.Now);
-
-            DatabaseProvider DBP = new DatabaseProvider();
-            DBP.ExecuteQuery(cmd);
-        }
-	}
-}
 }

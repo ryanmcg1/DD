@@ -16,7 +16,7 @@ namespace DDWebApp.Models.Venue
 
         public static VenueInfo GetVenueById(int ID)
         {
-            DataSet ds = DatabaseProvider.ReturnDataset("SELECT * FROM Venue WHERE VenueID =" + ID);
+            DataSet ds =null;// = DatabaseProvider.ReturnDataset("SELECT * FROM Venue WHERE VenueID =" + ID);
 
             if (ds != null)
             {
@@ -42,7 +42,7 @@ namespace DDWebApp.Models.Venue
             string sql = string.Format("SELECT * FROM Venue {0}", where);
 
             //Get DS
-            DataSet ds = DatabaseProvider.ReturnDataset(sql);
+            DataSet ds =null;// = DatabaseProvider.ReturnDataset(sql);
 
             if (ds != null)
             {

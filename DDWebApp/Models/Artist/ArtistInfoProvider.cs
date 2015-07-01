@@ -7,12 +7,12 @@ using System.Web;
 
 namespace DDWebApp.Models.Artist
 {
-    public class ArtistInfoProvider : ArtistInfo
+    public class ArtistInfoProvider 
     {
 
         public static ArtistInfo GetArtistById(int ID)
         {
-            DataSet ds = DatabaseProvider.ReturnDataset("SELECT top 1 * FROM artist WHERE ArtistID =" + ID);
+            DataSet ds =null;// = DatabaseProvider.ReturnDataset("SELECT top 1 * FROM artist WHERE ArtistID =" + ID);
 
             if (ds != null)
             {
@@ -49,7 +49,8 @@ namespace DDWebApp.Models.Artist
                 sql = sql + " Order by " + OrderBy;
 
             //Get DS
-            DataSet ds = DatabaseProvider.ReturnDataset(sql);
+            DatabaseProvider dbProvider = new DatabaseProvider();
+            DataSet ds = dbProvider.ReturnDataset(sql);
 
             if (ds != null)
             {

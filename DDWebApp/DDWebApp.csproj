@@ -327,7 +327,14 @@
     </Compile>
     <Compile Include="Models\Artist\ArtistInfo.cs" />
     <Compile Include="Models\Artist\ArtistInfoProvider.cs" />
+    <Compile Include="Models\Artist\Skip.cs" />
+    <Compile Include="Models\Artist\SkipProperty.cs" />
+    <Compile Include="Models\Database\DALCommand.cs" />
     <Compile Include="Models\Database\Database.cs" />
+    <Compile Include="Models\Database\DateSet.cs" />
+    <Compile Include="Models\Database\Idal.cs" />
+    <Compile Include="Models\Database\OracleServer.cs" />
+    <Compile Include="Models\Database\SqlServer.cs" />
     <Compile Include="Models\Events\EventsInfo.cs" />
     <Compile Include="Models\Events\EventsInfoProvider.cs" />
     <Compile Include="Models\Identity\ApplicationDbContext.cs" />
@@ -342,6 +349,7 @@
     <Compile Include="Models\Identity\MyUserManager.cs" />
     <Compile Include="Models\Identity\MyUserRole.cs" />
     <Compile Include="Models\Identity\SmsService.cs" />
+    <Compile Include="Models\Log\DBLog.cs" />
     <Compile Include="Models\Log\Log.cs" />
     <Compile Include="Models\MessageEventArgs\MessageEventsArg.cs" />
     <Compile Include="Models\Roles\RoleInfoProvider.cs" />

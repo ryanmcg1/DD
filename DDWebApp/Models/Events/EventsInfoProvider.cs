@@ -17,7 +17,7 @@ namespace DDWebApp.Models.EventInfoProvider
 
         public static EventInfo GetEventById(int ID)
         {
-            DataSet ds = DatabaseProvider.ReturnDataset("SELECT * FROM Event WHERE EventID =" + ID);
+            DataSet ds = null; ;// = DatabaseProvider.ReturnDataset("SELECT * FROM Event WHERE EventID =" + ID);
 
             if (ds != null)
             {
@@ -63,7 +63,7 @@ namespace DDWebApp.Models.EventInfoProvider
             
 
             //Get DS
-            DataSet ds = DatabaseProvider.ReturnDataset(sql);
+            DataSet ds =null;// = DatabaseProvider.ReturnDataset(sql);
 
             if (ds != null)
             {

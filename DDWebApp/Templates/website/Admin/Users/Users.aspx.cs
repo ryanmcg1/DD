@@ -40,8 +40,9 @@ namespace DDWebApp.Templates.website.Admin.Users
             }
             catch (Exception exec)
             {
-                LogInfo.WriteLog(exec.Message);
-                LogInfo.WriteLog(exec.InnerException.Message);
+                DBLog logInfo = new DBLog();
+                logInfo.WriteToLog(exec.Message);
+                logInfo.WriteToLog(exec.InnerException.Message);
             }
             
 

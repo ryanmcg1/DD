@@ -45,7 +45,7 @@
                         <p>Artist Email:<%# Eval("ArtistEmail") %> <br /></p>
                         <p>Artist PhoneNumber:<%# Eval("ArtistPhoneNumber") %> <br /></p>
                         <p>Artist dateCreated:<%# Eval("CreationTimeStamp") %> <br /></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dui pharetra justo molestie, vel tincidunt nisl malesuada. Proin tempor augue ac erat imperdiet faucibus. Morbi sed justo sed mauris lacinia lacinia at id dolor. Donec sit amet diam magna. Duis ac lacus tristique, sagittis ex quis, ultrices nunc. Nam a accumsan lectus. Duis neque nunc, aliquet eget diam eget, viverra viverra ante. In vehicula ex quis sem maximus, quis auctor felis porttitor. Ut venenatis consectetur enim, feugiat ultricies lorem egestas quis. Morbi ut purus at justo posuere blandit.  </p>
+                        <p> Proin tempor augue ac erat imperdiet faucibus. Morbi sed justo sed mauris lacinia lacinia at id dolor. Donec sit amet diam magna. Duis ac lacus tristique, sagittis ex quis, ultrices nunc. Nam a accumsan lectus. Duis neque nunc, aliquet eget diam eget, viverra viverra ante. In vehicula ex quis sem maximus, quis auctor felis porttitor. Ut venenatis consectetur enim, feugiat ultricies lorem egestas quis. Morbi ut purus at justo posuere blandit.  </p>
                         <a href="servicesLower.html">Read more</a>
                     </div>
                 </div>

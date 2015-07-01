@@ -14,11 +14,10 @@ namespace DDWebApp.Models.Venue
     public class VenueInfo
     {
         public event EventHandler<MessageEventArgs> OnSaveVenue;
-
-        private string _VenueName;
-        private string _VenueWebsite;
-        private string _VenueEmail;
-
+        public string VenueName { get; set; }
+        public string VenueWebsite { get; set; }
+        public string VenueEmail { get; set; }
+        
         public VenueInfo()
         {
 
@@ -32,45 +31,7 @@ namespace DDWebApp.Models.Venue
         }
 
 
-        public string VenueName
-        {
-            get
-            {
-                return _VenueName;
-            }
-
-            set
-            {
-                _VenueName = value;
-            }
-        }
-
-        public string VenueWebsite
-        {
-            get
-            {
-                return _VenueWebsite;
-            }
-
-            set
-            {
-                _VenueWebsite = value;
-            }
-        }
-
-
-        public string VenueEmail
-        {
-            get
-            {
-                return _VenueEmail;
-            }
-
-            set
-            {
-                _VenueEmail = value;
-            }
-        }
+        
 
         public bool SaveVenue()
         {
@@ -78,16 +39,15 @@ namespace DDWebApp.Models.Venue
             using (SqlCommand cmd = new SqlCommand())
             {
                 //cmd.CommandText = "INSERT INTO Venue(VenueName,VenueEmail,VenueWebsite)VALUES(@VenueName,@VenueEmail,@VenueWebsite)";
-                cmd.Parameters.AddWithValue("@VenueName", _VenueName);
-                cmd.Parameters.AddWithValue("@VenueWebsite", _VenueWebsite);
-                cmd.Parameters.AddWithValue("@VenueEmail", _VenueEmail);
+                cmd.Parameters.AddWithValue("@VenueName", VenueName);
+                cmd.Parameters.AddWithValue("@VenueWebsite", VenueWebsite);
+                cmd.Parameters.AddWithValue("@VenueEmail", VenueEmail);
 
-                DatabaseProvider DBP = new DatabaseProvider();
-               
-                this.OnSaveVenue += LogInfo.OnEvent;
+                this.OnSaveVenue += DBLog.OnEvent;
                 //Execute sqlcommand
-                bool result = DBP.ExecuteQuery(cmd);
-                OnSaveVenueEvent("Venue saved:" + _VenueName);
+                DatabaseProvider DBP = new DatabaseProvider();
+                bool result=false;// = DBP.ExecuteStoredProc(cmd,"sp_InsertVenue");
+                OnSaveVenueEvent("Venue saved:" + VenueName);
                 return result;
             }
         }
