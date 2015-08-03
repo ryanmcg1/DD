@@ -5,9 +5,12 @@ using System.Web;
 using System.Data.SqlClient;
 using DDWebApp.Models.MessageEventArgInfo;
 using DDWebApp.Models.Database;
-using DDWebApp.Models.Logger;
+using DDWebApp.Models.DBLog;
 using System.Data;
 using System.Reflection;
+using NLog;
+using NUnit;
+using NUnit.Framework;
 
 
 namespace DDWebApp.Models.Artist
@@ -30,9 +33,9 @@ namespace DDWebApp.Models.Artist
         public string ArtistNotes2 { get; set; }
         public bool ArtistIsPublished { get; set; }
         [SkipProperty]
-        public DateTime? CreationTimeStamp { get; set; }
+        public DateTime CreationTimeStamp { get; set; }
         [SkipProperty]
-        public DateTime? UpdateTimeStamp { get; set; } 
+        public DateTime UpdateTimeStamp { get; set; } 
         #endregion
 
         const string TableName = "Artist";
@@ -69,14 +72,15 @@ namespace DDWebApp.Models.Artist
             this.ArtistIsPublished = (bool)dr["ArtistIsPublished"];
             this.ArtistNotes1 = dr["ArtistNotes1"].ToString();
             this.ArtistNotes2 = dr["ArtistNotes2"].ToString();
-            this.CreationTimeStamp = dr.Field<DateTime?>("CreationTimeStamp");
-            this.UpdateTimeStamp = dr.Field<DateTime?>("UpdateTimeStamp");
+            this.CreationTimeStamp = dr.Field<DateTime>("CreationTimeStamp");
+            this.UpdateTimeStamp = dr.Field<DateTime>("UpdateTimeStamp");
         }
 
+        [Test]
         public bool SaveArtist()
         {
             //Log event
-            this.OnSaveArtist += DBLog.OnEvent;
+            //this.OnSaveArtist += DBLog.OnEvent;
 
             Dictionary<string, object> parameterList = new Dictionary<string, object>();
             foreach (var propertyInfo in this.GetType().GetProperties().Where(pi => !Attribute.IsDefined(pi, typeof(SkipPropertyAttribute))))
@@ -88,21 +92,8 @@ namespace DDWebApp.Models.Artist
             DatabaseProvider DBP = new DatabaseProvider();
             bool result = DBP.ExecuteStoredProc(parameterList, "sp_InsertArtist");
             OnSaveArtistEvent("Artist saved:" + this.ArtistName + "-" + result);
+            Assert.AreSame(true, result);
             return result;
-
-            //cmd.Parameters.AddWithValue("@ArtistName", this.ArtistName);
-            //cmd.Parameters.AddWithValue("@ArtistWebsite", this.ArtistWebsite);
-            //cmd.Parameters.AddWithValue("@ArtistPhoneNumber", this.ArtistPhoneNumber);
-            //cmd.Parameters.AddWithValue("@ArtistEmail", this.ArtistEmail);
-            //cmd.Parameters.AddWithValue("@ArtistAddress1", this.ArtistAddress1);
-            //cmd.Parameters.AddWithValue("@ArtistAddress2", this.ArtistAddress2);
-            //cmd.Parameters.AddWithValue("@ArtistAddress3", this.ArtistAddress3);
-            //cmd.Parameters.AddWithValue("@ArtistPostCode", this.ArtistPostCode);
-            //cmd.Parameters.AddWithValue("@ArtistNotes1", this.ArtistNotes1);
-            //cmd.Parameters.AddWithValue("@ArtistNotes2", this.ArtistNotes2);
-            //cmd.Parameters.AddWithValue("@ArtistIsPublished", this.ArtistIsPublished);   
-
-            
         }
 
         protected virtual void OnSaveArtistEvent(string message)
