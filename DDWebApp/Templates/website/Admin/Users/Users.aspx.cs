@@ -9,7 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using DDWebApp.Models.Users;
-using DDWebApp.Models.Logger;
+using DDWebApp.Models.DBLog;
 
 namespace DDWebApp.Templates.website.Admin.Users
 {

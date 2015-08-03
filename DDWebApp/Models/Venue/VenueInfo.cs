@@ -6,7 +6,7 @@ using DDWebApp.Models;
 using System.Data.SqlClient;
 using DDWebApp.Models.MessageEventArgInfo;
 using DDWebApp.Models.Database;
-using DDWebApp.Models.Logger;
+using DDWebApp.Models.DBLog;
 using System.Data;
 
 namespace DDWebApp.Models.Venue

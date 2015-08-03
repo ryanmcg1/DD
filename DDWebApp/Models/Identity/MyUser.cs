@@ -6,7 +6,7 @@
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using DDWebApp.Models.MessageEventArgInfo;
-    using DDWebApp.Models.Logger;
+    using DDWebApp.Models.DBLog;
 
     public class MyUser : IdentityUser<long, MyLogin, MyUserRole, MyClaim>
     {

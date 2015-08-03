@@ -5,12 +5,10 @@ using System.Web;
 
 namespace DDWebApp.Models.Log
 {
-    public abstract class Logs
+    public class Log
     {
-        public abstract void WriteToLog(string message);
 
-        public abstract void DeleteFromLog(int id);
-        public abstract void ClearLog();
+
 
     }
 }

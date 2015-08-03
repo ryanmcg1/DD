@@ -7,19 +7,12 @@ using DDWebApp.Models.MessageEventArgInfo;
 using DDWebApp.Models.Database;
 using DDWebApp.Models.Log;
 
-namespace DDWebApp.Models.Logger
+namespace DDWebApp.Models.DBLog
 {
 
 
 public class DBLog : Logs
 {
-
-    public enum LogTypes
-    {
-        Information = 1,
-        Error = 2
-    }
-
     public static void OnEvent(object sender, MessageEventArgs e)
     {
         using (SqlCommand cmd = new SqlCommand())
@@ -33,7 +26,7 @@ public class DBLog : Logs
         }
     }
 
-	public override void WriteToLog(string message)
+	public override void WriteToLog(string message,MessageType Severity)
 	{
         using (SqlCommand cmd = new SqlCommand())
         {
@@ -54,6 +47,11 @@ public class DBLog : Logs
     public override void ClearLog()
     {
        
+    }
+
+    public override void WriteToLog(Exception message, Logs.MessageType Severity)
+    {
+        throw new NotImplementedException();
     }
 }
 }
